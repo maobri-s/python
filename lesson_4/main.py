@@ -49,3 +49,4 @@
 #    print(bukva)
 #     translate = translate + alphabet[bukva]
 #print(translate)
+
