@@ -64,3 +64,22 @@
 # except Exception as error_message:
 #     # as - сохранить ошибку в error_message
 #     print("Это слово запрещено!", error_message)
+
+
+ints = []
+try:
+    f = open("fd.txt")
+except FileNotFoundError:
+    print("ну не получилось☹")
+else:
+    try:
+        for line in f:
+            ints.append(int(line))
+    except ValueError:
+        print("тут не число")
+    else:  # ошибок неть
+        print(ints)
+    finally:  #ваще всегда
+        f.close()
+        print("я закрыл фаел😁")
+
