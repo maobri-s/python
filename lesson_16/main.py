@@ -1,95 +1,75 @@
-  # Словари
-#  d = {}  # пустой словарь
-#  d = dict()  # пустой словарь
+# Лямбда(lambda) функции
+# plus_one2 = lambda a, b: a + b + 1
+# print(plus_one2(5, 4)
 
-#  d = {"Ключ1": 1,
-#      10: "два",
-#      True: "Ложь",
-#       True: "Богдан",
-#       " ": 0,
-#       "": 45,
-#       (1, 2, 3): "У"}
+# if-else в lambda
+# result = lambda: True if answer == "Д" else False
 
-  # ФУНКЦИИ
-# def hello_world():  # объявление функции
-#     print("hello world")
+# List comprehension (генератор списка)
+# spisok = []
+# for i in range(1, 6):  # от 1 до 5
+#    spisok.append(i)
+# print(spisok)
 
-#hello_world()  # вызов функции
-#hello_world()  # вызов функции
-
-# def func(imya):
-#    print(imya, "777")
-
-# name = input("Какое погоняло: ")
-# func(imya=name)  # вызов функции с аргументом
-
-# def slojenie(chislo1, chislo2):
-#    result = chislo1 + chislo2
-#    return result  # вернуть что-то из функции
-
-# print(slojenie(0, 0))  # вывод результата функции(то что вернёт return)
-# x = slojenie(5,3)
-
-# def more_5(number):
-#    if number > 5:
-#        return True
-
-# if more_5(8):  # если выполнится
-#    print("Балдёж 😎")
+# spisok2 = [n for n in range(1, 6)]
+# 1. List comprehension всегда пишется в []
+# 2. for n in range(1, 6)  обычный цикл for ->
+# сколько будет элементов в списке
+# 3. все что слева от for -> элемент списка
+# print(spisok2)
 
 # первый за дачей
-
-# def is_sorted(spisok):
-#    s = sorted(spisok)
-#     if spisok == s:
-#         return True
-#
-# spisok = [1, 0, 5, 6, 78, 123]
-# if is_sorted(spisok):
-#     print("хэппи хэппи хэппи😁")
-# else:
-#     print("я хочу пельменей☹")
+# c2f = lambda c:c * 9/5 + 32
+# f2c = lambda f:(f - 32) * 5/9
+# c2k = lambda c:c + 273.15
+# k2c = lambda k:k - 273.15
+# f2k = lambda f:c2k(f2c(f))
+# print(f2k(203))
 
 # второй за дачей
+# from random import randint
+# banana = lambda exit_trigger: True if exit_trigger == "да" else False
+# while True:
+#    arbuz = int(input("сколько раз бросаешь куб?🎲"))
+#    dies = [randint(1,6) for n in range(arbuz)]
+#    print(dies)
+#    kivi = input("выходишь? да/нет").strip()
+#    banana(kivi)
+#    if banana(kivi):  # если захотел выйти
+#        break
 
-def find_longest(tadjiki:list):
-    francuzi = []
+# третий за дачей
+# from random import choice
+# chars = [list("АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"),
+#         list("абвгдеёжзийклмнопрстуфхцчшщъыьэюя"),
+#         list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
+#         list("abcdefghijklmnopqrstuvwxyz"),
+#         list("1234567890")
+#        ]
 
-    for rossiane in tadjiki:
-        francuzi.append(len(rossiane))
-    maxim = max(francuzi)
-    portugalci = francuzi.index(maxim)  # нашли индекс максимума
-    return tadjiki[portugalci], maxim
+# cot = [choice(choice(chars)) for n in range(6)]
+# cotik = "".join(cot)
+# dictionaryy = {"https://www.google.com":"12345"}
+# ssylka_na_kavkaz = "https://www.google.com"
+# if ssylka_na_kavkaz in dictionaryy:
+#    print("ссылка уже есть в базе, вот её кот:")  # выводим код ссылкой
+#    print(dictionaryy[ssylka_na_kavkaz])
+# else:
+#    print("ссылка добавлена, держи кота с:", cotik)
+#    dictionaryy[ssylka_na_kavkaz] = cotik
 
+# четвёртый за особняк
 
-uzbeki = ["еееееее", "уууууу", "ааааа"]
-print(find_longest(uzbeki))
-
-  # третий за дачей
-
-  # def max_min(spisok):
-  #     # schweizari = min(spisok)
-  #     # schotlandzi = max(spisok)
-  #
-  #     belorusi = sorted(spisok)
-  #     italyanci = belorusi[0]   # минимум
-  #     tayzi = belorusi[-1]   # максимум
-  #     return italyanci, tayzi
-  #
-  # spisok = [37, 46, 20, 49034, 96]
-  # print(max_min(spisok))
-
-  # четвёртый за дачей
-
-  def is_prime(celoe_chislo):
-      for vietnamzi in range(2, celoe_chislo + 1):
-          if vietnamzi == celoe_chislo:  # дошли до конца
-              return True
-          if celoe_chislo % vietnamzi == 0:  # мы нашли делитель🦦
-              break
+u = lambda a, b:a / b
+print(u(6, 3))
+u2 = lambda a, b:a % b
+print(u2(6, 3))
+u3 = lambda a, b:a // b
+print(u3(6, 3))
+u4 = lambda a, b:a ** b
+print(u4(6, 3))
+u5 = lambda a: -a if a < 0 else a  # если отрицательное, меняем знак
+print(u5(-6))
 
 
-  if is_prime(71359):
-      print("prostoe chislo🐸")
-  else:
-      print("natural chislo🏳‍🌈")
+
