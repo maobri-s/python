@@ -32,7 +32,7 @@
 
 #tup = (1, 2, 3)
 #tup1 = 1, 2, 3  # то ж самое
-tup2 = 1,
+# tup2 = 1,
 
 #print(max(tup))
 #tup_copy = reversed(tup)
